@@ -1,7 +1,7 @@
 package Database
 
 import (
-	"Project2024kelasV/Node"
+	"Project2024kelasVnew/Node"
 )
 
 var DBmember Node.TableMember
