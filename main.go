@@ -1,31 +1,43 @@
 package main
 
 import (
-	"Project2024kelasVnew/Model"
-	"Project2024kelasVnew/Node"
+	"Project2024kelasV/View"
 	"fmt"
 )
 
-func main() {
-	Model.InsertMember(1, "Kurniawan", "surabaya", 100)
-	Model.InsertMember(2, "Aan", "surabaya", 50)
-	Model.InsertMember(3, "Nino", "Malang", 150)
+func menu() {
+	for {
+		fmt.Println("Menu Program")
+		fmt.Println("1. Insert Member")
+		fmt.Println("2. Update Member")
+		fmt.Println("3. Delete Member")
+		fmt.Println("4. Read All Member")
+		fmt.Println("5. Search Member")
+		fmt.Println("6. Exit")
+		fmt.Println("----------------")
+		fmt.Print("masukkan menu pilihan anda: ")
 
-	//tes Model update
-	member1 := Node.Member{
-		Id:     2,
-		Nama:   "Adel",
-		Alamat: "Malang",
-		Point:  0,
-	}
-	tes := Model.UpdateMember(member1)
-	fmt.Println("return update member :", tes)
-	// model ReadAll Testing
-	members := Model.ReadAllMember()
-	if members != nil {
-		for members.Next != nil {
-			fmt.Println(members.Next.Data)
-			members = members.Next
+		var choice int
+		fmt.Scanln(&choice)
+
+		switch choice {
+		case 1:
+			View.InsertMember()
+		case 2:
+			//updateMember()
+		case 3:
+			//deleteMember()
+		case 4:
+			View.ReadAllMember()
+		case 5:
+			//searchMember()
+		case 6:
+			fmt.Println("exit program")
+			return
 		}
 	}
+}
+
+func main() {
+	menu()
 }

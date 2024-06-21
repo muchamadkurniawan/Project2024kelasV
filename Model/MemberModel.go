@@ -1,8 +1,8 @@
 package Model
 
 import (
-	"Project2024kelasVnew/Database"
-	"Project2024kelasVnew/Node"
+	"Project2024kelasV/Database"
+	"Project2024kelasV/Node"
 )
 
 func InsertMember(id int, nama string, alamat string, point float32) {

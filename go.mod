@@ -1,3 +1,3 @@
-module Project2024kelasVnew
+module Project2024kelasV
 
 go 1.19
